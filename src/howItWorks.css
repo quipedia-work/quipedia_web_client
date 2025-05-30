@@ -1,0 +1,19 @@
+.animated-dotted-line {
+  background-image: repeating-linear-gradient(
+    to right,
+    #2563eb,
+    #2563eb 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  animation: moveDots 2s linear infinite;
+}
+
+@keyframes moveDots {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 16px 0;
+  }
+}

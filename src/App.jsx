@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Features from './components/Features';
 import RoleBasedSection from './components/RoleBasedSection'; // ✅ Import it
 import TestimonialsPage from './components/Testinomials';
+import HowItWorks from './components/HowItWorks';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <RoleBasedSection /> 
       <TestimonialsPage />
+      <HowItWorks />
     </>
   );
 }
