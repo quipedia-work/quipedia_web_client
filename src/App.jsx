@@ -5,6 +5,7 @@ import RoleBasedSection from './components/RoleBasedSection'; // ✅ Import it
 import TestimonialsPage from './components/Testinomials';
 import HowItWorks from './components/HowItWorks';
 import CookieBanner from './components/CookieBanner';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <TestimonialsPage />
       <HowItWorks />
       <CookieBanner />
+      <Footer />
     </>
   );
 }

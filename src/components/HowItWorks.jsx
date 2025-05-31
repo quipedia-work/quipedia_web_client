@@ -1,5 +1,6 @@
-import { FaBinoculars, FaUserFriends, FaRocket } from "react-icons/fa";
-import "../howItWorks.css"; // custom animations
+import { FaBinoculars, FaUserFriends } from "react-icons/fa";
+import { HiOutlineRocketLaunch } from "react-icons/hi2"; // sleeker rocket
+import "../howItWorks.css";
 
 const steps = [
   {
@@ -15,7 +16,7 @@ const steps = [
       "Engage with passionate students, trusted institutions, and verified experts ready to share or learn.",
   },
   {
-    icon: <FaRocket className="text-purple-500 text-4xl mb-3" />,
+    icon: <HiOutlineRocketLaunch className="text-purple-500 text-4xl mb-3" />,
     title: "Launch Knowledge Sessions",
     description:
       "Host or attend real-time sessions, earn certifications, and grow your career.",
@@ -33,7 +34,16 @@ export default function HowItWorks() {
           Whether you're a student, expert, or institution – getting started is easy and impactful.
         </p>
 
-        {/* Animated connector line */}
+        {/* Moving Rocket */}
+        <div className="hidden md:block absolute top-[120px] left-0 w-full h-20 pointer-events-none z-30">
+          <div className="animated-rocket text-4xl text-blue-600">
+            <div className="rocket-body">
+              <HiOutlineRocketLaunch />
+            </div>
+          </div>
+        </div>
+
+        {/* Line */}
         <div className="absolute top-[180px] left-0 right-0 z-0 hidden md:flex justify-center items-center">
           <div className="w-[70%] h-[2px] bg-gray-300 relative">
             <div className="absolute w-full h-full animated-dotted-line"></div>
@@ -42,7 +52,7 @@ export default function HowItWorks() {
           </div>
         </div>
 
-        {/* Steps */}
+        {/* Cards */}
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           {steps.map((step, idx) => (
             <div

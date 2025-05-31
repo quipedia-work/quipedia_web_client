@@ -120,21 +120,22 @@ export default function RoleBasedSection() {
           Why Choose <span className="text-blue-600">Quipedia</span>?
         </h2>
 
-        <div className="flex justify-center flex-wrap gap-3 mb-10">
-          {roles.map((r) => (
-            <button
-              key={r.key}
-              onClick={() => setActiveRole(r.key)}
-              className={`px-5 py-2 text-sm sm:text-base rounded-full font-medium border transition-all duration-300 shadow-sm ${
-                activeRole === r.key
-                  ? "bg-blue-600 text-white"
-                  : "text-blue-600 border-blue-600 hover:bg-blue-50"
-              }`}
-            >
-              {r.label}
-            </button>
-          ))}
-        </div>
+       <div className="flex justify-center flex-wrap gap-3 mb-10">
+  {roles.map((r) => (
+    <button
+      key={r.key}
+      onClick={() => setActiveRole(r.key)}
+      className={`px-5 py-2 text-sm sm:text-base rounded-md font-medium border transition-all duration-300 shadow-sm ${
+        activeRole === r.key
+          ? "bg-blue-600 text-white"
+          : "text-blue-600 border-blue-600 hover:bg-blue-50"
+      }`}
+    >
+      {r.label}
+    </button>
+  ))}
+</div>
+
 
         <div className="min-h-[340px]">
           <AnimatePresence mode="wait">
@@ -153,9 +154,10 @@ export default function RoleBasedSection() {
                 <p className="text-gray-600 mb-5 text-base sm:text-lg">
                   {data.description}
                 </p>
-                <button className="bg-blue-600 text-white px-6 py-2.5 rounded-full shadow hover:bg-blue-700 transition">
-                  {data.button}
-                </button>
+  
+               <button className="bg-blue-600 text-white px-5 py-2.5 rounded-md hover:bg-blue-700 transition w-full sm:w-auto">
+               {data.button}
+              </button>
               </div>
               <img
                 src={data.illustration}

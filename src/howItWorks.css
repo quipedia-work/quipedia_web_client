@@ -1,19 +1,81 @@
+/* howItWorks.css */
+
+/* Dotted line animation */
 .animated-dotted-line {
   background-image: repeating-linear-gradient(
     to right,
-    #2563eb,
-    #2563eb 4px,
-    transparent 4px,
-    transparent 8px
+    #d1d5db 0,
+    #d1d5db 8px,
+    transparent 8px,
+    transparent 16px
   );
-  animation: moveDots 2s linear infinite;
+  height: 2px;
+  animation: moveDashes 4s linear infinite;
 }
 
-@keyframes moveDots {
-  from {
-    background-position: 0 0;
+@keyframes moveDashes {
+  0% {
+    background-position: 0;
   }
-  to {
-    background-position: 16px 0;
+  100% {
+    background-position: 32px;
+  }
+}
+
+/* Rocket movement */
+@keyframes rocketMoveStraight {
+  0% {
+    left: -5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    left: 45%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 105%;
+    opacity: 0;
+  }
+}
+
+.animated-rocket {
+  position: absolute;
+  animation: rocketMoveStraight 6s ease-in-out infinite;
+}
+
+/* Rocket body with flame trail */
+.rocket-body {
+  position: relative;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.rocket-body::after {
+  content: "";
+  position: absolute;
+  left: -8px;
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, red, orange, transparent);
+  animation: flameTrail 0.2s infinite;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+@keyframes flameTrail {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.3) translateY(5px);
+    opacity: 0;
   }
 }
