@@ -4,6 +4,8 @@ import Features from './components/Features';
 import RoleBasedSection from './components/RoleBasedSection'; // ✅ Import it
 import TestimonialsPage from './components/Testinomials';
 import HowItWorks from './components/HowItWorks';
+import CookieBanner from './components/CookieBanner';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <RoleBasedSection /> 
       <TestimonialsPage />
       <HowItWorks />
+      <CookieBanner />
     </>
   );
 }

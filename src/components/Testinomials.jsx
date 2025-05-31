@@ -47,13 +47,14 @@ const TestimonialsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-20 px-4">
       <div className="bg-white max-w-7xl mx-auto rounded-3xl shadow-xl p-12 border border-gray-100">
-        <h2 className="text-center text-5xl font-extrabold text-gray-800">
-          Trusted by <span className="text-blue-600">Institutions</span>, Backed by Experts ✨
-        </h2>
-        <p className="text-center text-gray-500 text-xl mt-4 max-w-2xl mx-auto">
-          Colleges and speakers across India rely on Quipedia for impactful sessions,
-          streamlined planning, and career growth.
-        </p>
+        <h2 className="text-center text-3xl md:text-5xl font-bold md:font-extrabold text-gray-800 leading-tight tracking-tight">
+  Trusted by <span className="text-blue-600">Institutions</span>, Backed by Experts ✨
+</h2>
+<p className="text-center text-base md:text-xl text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+  Colleges and speakers across India rely on Quipedia for impactful sessions,
+  streamlined planning, and career growth.
+</p>
+
 
         {/* Scrolling Logos */}
         <div className="overflow-hidden w-full my-16 relative">
