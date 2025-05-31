@@ -124,7 +124,7 @@ const TestimonialsPage = () => {
           }
         }
         .animate-scroll-logo {
-          animation: scroll-logo 60s linear infinite;
+          animation: scroll-logo 10s linear infinite;
         }
       `}</style>
     </div>
