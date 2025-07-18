@@ -6,7 +6,7 @@
 
 ## 🚀 Live Preview
 
-👉 [https://quipedia-client.onrender.com](https://quipedia-client.onrender.com) *(update this with your Render link if needed)*
+👉 [https://quipedia-client.onrender.com]([https://quipedia-client.onrender.com](https://quipedia-web-client.vercel.app/)) *(update this with your Render link if needed)*
 
 ---
 
